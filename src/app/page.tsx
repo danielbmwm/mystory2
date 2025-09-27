@@ -1,8 +1,17 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center text-center p-8">
       <div className="max-w-2xl">
-        <img src="/logo.svg" alt="MyStory" className="w-24 mx-auto mb-6" />
+        <Image
+          src="/logo.svg"
+          alt="MyStory"
+          width={96}
+          height={96}
+          priority
+          className="mx-auto mb-6"
+        />
         <h1 className="text-4xl font-bold mb-4">Willkommen bei MyStory 🚀</h1>
         <p className="text-lg text-gray-600 mb-8">
           Interaktive KI-Geschichten für Eltern & Kinder – personalisiert, spannend und kindgerecht.
@@ -29,12 +38,7 @@ export default function Home() {
           </div>
         </div>
 
-        <a
-          href="#"
-          className="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700 transition"
-        >
-          Jetzt ausprobieren
-        </a>
+        {/* Optional: CTA später per Link */}
       </div>
     </main>
   );
